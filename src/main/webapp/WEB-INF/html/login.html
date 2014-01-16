@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh_CN">
+<head>
+<meta charset="utf-8">
+<title>AcsWorks3</title>
+<link rel="stylesheet" href="resources/bootstrap/css/bootstrap.css" />
+<style type="text/css">
+form {
+	margin-top: 100px;
+}
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		console.log("onloaded.");
+	}
+</script>
+</head>
+<body>
+	<form class="form-horizontal" role="form" method="post" action="login">
+		<div class="form-group">
+			<div class="col-lg-offset-4 col-lg-4">
+				<legend>User Login</legend>
+			</div>
+		</div>
+		<div class="form-group ">
+			<label class="col-lg-offset-2 col-lg-2 control-label" for="login_name">用户名：</label>
+			<div class="col-lg-4">
+				<input type="text" class="form-control" id="login_name" name="name" placeholder="Name" required min="3">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg-offset-2 col-lg-2 control-label" for="login_password">密码：</label>
+			<div class="col-lg-4">
+				<input type="password" class="form-control" id="login_password" name="password" placeholder="password" required min="3"> <span class="help-block">input your password.</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-4 col-lg-6">
+				<button type="submit" class="btn btn-primary">登 录</button>
+				<button type="reset" class="btn btn-default">重 置</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-offset-4 col-lg-6">
+				<div class="alert-message block-message warning">
+					<p style="color: red;">
+						<strong>${message}</strong>
+					</p>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

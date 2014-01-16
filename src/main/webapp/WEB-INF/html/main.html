@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh_CN" ng-app="AcsWorks3">
+<head>
+<meta charset="utf-8">
+<title>AcsWorks3</title>
+<link rel="stylesheet" href="resources/css/app.css" />
+<link rel="stylesheet" href="resources/bootstrap/css/bootstrap.css" />
+</head>
+<body>
+	<div class="container" ng-controller="MainController">
+		<div id="header" class="row">
+			<div class="page-header"><h2>欢迎:${userSessionInfo.name}</h2></div>
+		</div>
+		<div id="main" class="row">
+			<div id="Sidebar" class="col-lg-2">
+				<div id="accordion" class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="#panel1" class="panel-toggle" data-toggle="collapse" data-parent="#accordion"> 功能选项 </a>
+						</div>
+						<div id="panel1" class="panel-collapse collapse in">
+							<div class="list-group">
+								<a href="#/dept" class="list-group-item">部门管理</a>
+								<a href="#/dept" class="list-group-item">部门管理</a>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<a href="#panel2" class="panel-toggle" data-toggle="collapse" data-parent="#accordion"> 系统管理 </a>
+						</div>
+						<div id="panel2" class="panel-collapse collapse in">
+							<div class="list-group">
+								<a href="#" class="list-group-item">密码修改</a>
+								<a href="#" class="list-group-item">关于</a>
+								<a href="logout" class="list-group-item">退出</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="content" class="col-lg-10">
+				<div class="panel panel-default">
+					<div id="content-title" class="panel-heading">Welcome</div>
+					<div id="content-body" class="panel-body">
+						<div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
+						<div ng-view></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="" />
+		<div id=footer class="row">Example page footer</div>
+	</div>
+	
+	<script src="resources/jquery/jquery-1.10.2.js"></script>
+	<script src="resources/bootstrap/js/bootstrap.js"></script>
+	<script src="resources/angular/angular.js"></script>
+	<script src="resources/angular/angular-resource.js"></script>
+	<script src="resources/angular/angular-route.js"></script>
+	<script src="resources/angular/angular-cookies.js"></script>
+	<script src="resources/js/app.js"></script>
+	<script src="resources/js/services.js"></script>
+	<script src="resources/js/filters.js"></script>
+	<script src="resources/js/directives.js"></script>
+	<script src="resources/js/controllers/DeptController.js"></script>
+	<script src="resources/js/controllers/MainController.js"></script>
+	<script src="resources/js/common.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>
+
